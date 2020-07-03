@@ -12,7 +12,7 @@
 
 // request param: parâmetros que vem na própria rota que identificam um recurso
 // query param: parâmetros que vem na própria rota geralmente opcionais para filtros, paginações, etc.
-// requesto body: corpo da requisição -> parâmetros para criação/atualização de informações
+// request body: corpo da requisição -> parâmetros para criação/atualização de informações
 
 // SELECT * FROM users WHERE name = 'Diego'
 // knex('users').where('name', 'Diego').select(*)
@@ -21,12 +21,16 @@ import express from 'express'
 import routes from './routes'
 import path from 'path'
 import cors from 'cors'
+import { errors } from 'celebrate'
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 app.use(routes)
+
 app.use('/uploads', express.static(path.resolve(__dirname, '..', 'uploads')))
+
+app.use(errors())
 
 app.listen(3333)
