@@ -19,7 +19,7 @@ A coleta seletiva é um processo fundamental quando falamos em descartes de res�
 
 <h1 align="center">
     <img src=".github/webGif.gif" />
-    <img src=".github/mobileGif.gif" />
+    <img src=".github/mobileGif.gif" width="350px" />
 </h1>
 
 ## Pré-requisitos
